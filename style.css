@@ -1,0 +1,86 @@
+/* 1. Global resets */
+* {
+  margin: 0;          /* Remove default margins */
+  padding: 0;         /* Remove default paddings */
+  box-sizing: border-box; /* Easier width/height math */
+}
+
+/* 2. Page background & font */
+body {
+  font-family: Arial, Helvetica, sans-serif; /* Fallback stack */
+  background: #121212;     /* Dark background */
+  color: #fff;             /* Light text */
+  height: 100vh;         /* Full viewport height */
+  display: flex;         /* Center calculator */
+  align-items: center;   /* Vertical center */
+  justify-content: center; /* Horizontal center */
+}
+
+/* 3. Calculator wrapper */
+.calculator {
+  width: 320px;            /* Fixed width for simplicity */
+  background: #1e1e1e;       /* Slightly lighter dark */
+  border-radius: 12px;       /* Rounded corners */
+  padding: 20px;             /* Inner space */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4); /* Subtle shadow */
+}
+
+/* 4. Display screen */
+.display {
+  width: 100%;             /* Full width of parent */
+  height: 60px;              /* Fixed height */
+  font-size: 2rem;           /* Big readable text */
+  text-align: right;         /* Numbers align right */
+  padding: 0 10px;           /* Inner spacing */
+  margin-bottom: 15px;       /* Space below */
+  border: none;              /* Remove border */
+  border-radius: 8px;        /* Rounded */
+  background: #0c0c0c;        /* Even darker */
+  color: #fff;               /* White text */
+}
+
+/* 5. Button grid container */
+.buttons {
+  display: grid;             /* CSS Grid layout */
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  gap: 10px;                 /* Gap between buttons */
+}
+
+/* 6. Individual buttons */
+.btn {
+  padding: 20px;             /* Tall clickable area */
+  font-size: 1.5rem;         /* Big text */
+  border: none;              /* Remove default border */
+  border-radius: 8px;        /* Rounded corners */
+  background: #2a2a2a;       /* Dark button bg */
+  color: #fff;               /* White text */
+  cursor: pointer;           /* Pointer on hover */
+  transition: background 0.2s; /* Smooth hover */
+}
+.btn:hover {
+  background: #3a3a3a;        /* Lighter on hover */
+}
+.btn:active {
+  transform: scale(0.95);   /* Slight shrink when clicked */
+}
+
+/* 7. Operator buttons color */
+.operator {
+  background: #ff9500;         /* Orange accent */
+}
+.operator:hover {
+  background: #ffb143;        /* Lighter orange */
+}
+
+/* 8. Clear button accent */
+.btn-clear {
+  background: #ff3b30;        /* Red accent */
+}
+.btn-clear:hover {
+  background: #ff5449;        /* Lighter red */
+}
+
+/* 9. Zero button spans two columns */
+.zero {
+  grid-column: span 2;       /* Make it twice as wide */
+}
